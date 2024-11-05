@@ -1,0 +1,126 @@
+<!-- <div tabindex="-1" id="updateEmployeeModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class= "modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Update Employee</h5>
+        <button type="button" class="btn-close" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-control" formControlName="name">
+            <div *ngIf="editForm.get('name')?.invalid && editForm.get('name')?.touched" class="text-danger">
+              Name is required.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="text" id="salary" class="form-control" formControlName="salary">
+            <div *ngIf="editForm.get('salary')?.invalid && editForm.get('salary')?.touched" class="text-danger">
+              Salary is required.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="departmentId" class="form-label">Department</label>
+            <input type="text" id="departmentId" class="form-control" formControlName="departmentId">
+            <div *ngIf="editForm.get('departmentId')?.invalid && editForm.get('departmentId')?.touched" class="text-danger">
+              DepartmentId is required
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="managerId" class="form-label">ManagerId</label>
+            <input type="text" id="managerId" class="form-control" formControlName="managerId">
+            <div *ngIf="editForm.get('managerId')?.invalid && editForm.get('managerId')?.touched" class="text-danger">
+              ManagerId is required.
+            </div>
+          </div>
+
+
+          <button type="submit" (onclick)="onSubmit()" class="btn btn-primary" [disabled]="editForm.invalid">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+<main class="page payment-page">
+  <div class="block-heading d-flex justify-content-center">
+    <h2>Payment</h2>
+  </div>
+<section class="payment-form dark ">
+  <div class="container">
+
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <!-- <div class="products">
+        <h3 class="title">Checkout</h3>
+        <div class="item">
+          <span class="price">$200</span>
+          <p class="item-name">Product 1</p>
+          <p class="item-description">Lorem ipsum dolor sit amet</p>
+        </div>
+        <div class="item">
+          <span class="price">$120</span>
+          <p class="item-name">Product 2</p>
+          <p class="item-description">Lorem ipsum dolor sit amet</p>
+        </div>
+        <div class="total">Total<span class="price">$320</span></div>
+      </div> -->
+      <div class="card-details">
+        <h3 class="title">Credit Card Details</h3>
+        <div class="row">
+          <div class="form-group col-sm-12">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-control" formControlName="name">
+            <div *ngIf="editForm.get('name')?.invalid && editForm.get('name')?.touched" class="text-danger">
+              Name is required.
+            </div>
+          </div>
+          <div class="form-group col-sm-12">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="text" id="salary" class="form-control" formControlName="salary">
+            <div *ngIf="editForm.get('salary')?.invalid && editForm.get('salary')?.touched" class="text-danger">
+              Salary is required.
+            </div>
+          </div>
+          <!-- <div class="form-group col-sm-5">
+            <label for="">Expiration Date</label>
+            <div class="input-group expiration-date">
+              <input type="text" class="form-control" placeholder="MM" aria-label="MM" aria-describedby="basic-addon1">
+              <span class="date-separator">/</span>
+              <input type="text" class="form-control" placeholder="YY" aria-label="YY" aria-describedby="basic-addon1">
+            </div>
+          </div> -->
+          <div class="form-group col-sm-12">
+            <label for="departmentId" class="form-label">Department</label>
+            <input type="text" id="departmentId" class="form-control" formControlName="departmentId">
+            <div *ngIf="editForm.get('departmentId')?.invalid && editForm.get('departmentId')?.touched" class="text-danger">
+              DepartmentId is required
+            </div>
+          </div>
+          <div class="form-group col-sm-12">
+            <label for="managerId" class="form-label">ManagerId</label>
+            <input type="text" id="managerId" class="form-control" formControlName="managerId">
+            <div *ngIf="editForm.get('managerId')?.invalid && editForm.get('managerId')?.touched" class="text-danger">
+              ManagerId is required.
+            </div>
+          </div>
+
+
+          <!-- <div class="form-group col-sm-4">
+            <label for="cvc">CVC</label>
+            <input id="cvc" type="text" class="form-control" placeholder="CVC" aria-label="Card Holder" aria-describedby="basic-addon1">
+          </div> -->
+          <div class="form-group col-sm-12 d-flex justify-content-center">
+            <button type="submit" (onclick)="onSubmit()"  class="btn btn-primary btn-block w-50">Update</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+</main>

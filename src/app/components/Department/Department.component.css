@@ -1,0 +1,150 @@
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    top: 110px;
+}
+.product:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+  }
+
+  h1 {
+    text-align: center; /* Center the title */
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: #343a40; /* Set a dark gray color */
+    margin-bottom: 20px; /* Add spacing below the title */
+    letter-spacing: 1px; /* Add letter spacing for a cleaner look */
+    text-transform: uppercase; /* Make text uppercase */
+    background: linear-gradient(45deg, #27ae60, #6610f2); /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Show only the gradient in the text */
+  }
+  
+  /* Optional: add animation for a smooth entry */
+  h1 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 23%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 275px;
+    height: 220px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.product .price {
+    font-size: 1.1em;
+    color: #27ae60;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.Add-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 15%;
+    border-radius: 5px;
+}
+.Add-btn:hover {
+    background-color: #219150;
+}
+
+.product button {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product button:hover {
+    background-color: #219150;
+}
+
+.card-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-card {
+    text-align: center;
+    width: 50%;
+    padding: 0px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .filter-card h2 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+  }
+
+  .filter-section {
+    margin-bottom: 20px;
+  }
+
+  .filter-section label {
+    margin-right: 15px;
+  }
+
+
+@media (max-width: 768px) {
+    .product {
+        width: 48%;
+    }
+}
+
+@media (max-width: 576px) {
+    .product {
+        width: 100%;
+    }
+}

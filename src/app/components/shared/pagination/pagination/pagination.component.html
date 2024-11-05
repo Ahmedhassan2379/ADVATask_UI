@@ -1,0 +1,20 @@
+<nav aria-label="Page navigation example">
+  <!-- <ul class="pagination pagination-lg">
+
+    <li class="page-item"><a class="page-link" (onclick)="previousPage()" href="#">Previous</a></li>
+    <div>
+    <li *ngFor="let p of totalPagesArray" class="page-item">
+      <a (click)="goToPage(p)" class="page-link">{{p}}</a>
+    </li>
+    </div>
+    <li class="page-item"><a class="page-link" (onclick)="nextPage()" href="#">Next</a></li>
+  </ul> -->
+
+  <div class="pagination-container d-flex justify-content-center align-items-center mt-3">
+    <button (click)="previousPage()" class="btn btn-outline-primary mx-1">Previous</button>
+    <div *ngFor="let page of totalPagesArray" class="page-item mx-1">
+      <a (click)="goToPage(page)" class="page-link">{{ page }}</a>
+    </div>
+    <button (click)="nextPage()" class="btn btn-outline-primary mx-1">Next</button>
+  </div>
+</nav>

@@ -1,0 +1,48 @@
+
+.form-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    /* height: 80vh; */
+    /* background-color: #f8f9fa; */
+  }
+  
+  /* Enlarged form styling */
+  .centered-form {
+    width: 100%;
+    max-width: 600px; /* Increase max width to make form larger */
+    padding: 30px; /* Increase padding for a larger form */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    font-size: 1.2rem; /* Optional: increase font size */
+  }
+
+  /* Style for the h1 title */
+h1 {
+    text-align: center; /* Center the title */
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: #343a40; /* Set a dark gray color */
+    margin-bottom: 20px; /* Add spacing below the title */
+    letter-spacing: 1px; /* Add letter spacing for a cleaner look */
+    text-transform: uppercase; /* Make text uppercase */
+    background: linear-gradient(45deg, #27ae60, #6610f2); /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Show only the gradient in the text */
+  }
+  
+  /* Optional: add animation for a smooth entry */
+  h1 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

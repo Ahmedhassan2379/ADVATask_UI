@@ -1,0 +1,22 @@
+.page-link:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.pagination-container {
+    display: flex;
+    gap: 10px; /* Adds space between buttons */
+  }
+  
+  .page-item {
+    display: inline-block;
+  }
+  
+  .page-link {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: blue;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }

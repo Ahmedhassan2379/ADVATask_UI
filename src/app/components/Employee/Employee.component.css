@@ -1,0 +1,92 @@
+
+
+.card-centered {
+    display: flex;
+    justify-content: center;
+}
+/* .text-cexter { 
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+} */
+.filter-card {
+  display: flex;
+    text-align: center;
+    /* width: 50%; */
+    padding: 0px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(26, 22, 22, 0.7);
+    /* background: transparent; */
+    /* opacity: 1;  */
+  }
+
+  h1 {
+    text-align: center; /* Center the title */
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+    color: #343a40; /* Set a dark gray color */
+    margin-bottom: 20px; /* Add spacing below the title */
+    letter-spacing: 1px; /* Add letter spacing for a cleaner look */
+    text-transform: uppercase; /* Make text uppercase */
+    background: linear-gradient(45deg, #27ae60, #6610f2); /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Show only the gradient in the text */
+  }
+  
+  /* Optional: add animation for a smooth entry */
+  h1 {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .table {
+    background-color: #fff;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(26, 22, 22, 0.7);
+  }
+
+  .filter-card h2 {
+    margin-bottom: 3px;
+    font-size: 1.6em;
+  }
+  .container h1 {
+    margin-bottom: 25px;
+    font-size: 3.5em;
+  }
+
+  .form-check {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0px;
+    font-size: 20px;
+  }
+
+  .filter-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    gap: 15px; 
+    max-width: 80%;
+  }
+
+  .filter-section label {
+    margin-right: 15px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  /* .filter-section label input{
+    font-size: 10px;
+  } */

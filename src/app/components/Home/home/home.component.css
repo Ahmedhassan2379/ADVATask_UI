@@ -1,0 +1,18 @@
+.Add-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 15%;
+    border-radius: 5px;
+    width: 200px;
+}
+.Add-btn:hover {
+    background-color: #219150; /* Darker color on hover */
+  }
+
+  .container {
+    height: 80vh
+  }

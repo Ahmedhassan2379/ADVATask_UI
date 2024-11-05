@@ -1,0 +1,53 @@
+<div id="test" class="container mt-4">
+  <h1>Employees List</h1>
+  <div class="d-flex justify-content-center">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title d-flex justify-content-center mb-2">Filterd By Department</h3>
+        <div class="form-check">
+        <label *ngFor="let depart of departments">
+          <input type="checkbox" value="{{depart.name}}" (change)="filterEmployees(depart.id)">
+          {{depart.name}}
+        </label>
+      </div>
+      </div>
+    </div>
+  </div>
+  <table class="table table-bordered table-striped mt-3">
+    <thead class="table-dark text-center fs-5">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Department</th>
+        <th>Manager</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody class="text-center fs-5">
+      <tr *ngFor="let employee of employees; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.salary }}</td>
+        <td>{{ employee.departmentName }}</td>
+        <td>{{ employee.mangerName }}</td>
+        <td>
+          <button class="btn btn-primary mx-2 w-25" (click)="editEmployee(employee.id)">Edit</button>
+          <button class="btn btn-danger mx-2 w-25" (click)="removeEmployee(employee.id)">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <app-pagination [totalPages]="totalPages" [currentPage]="currentPage" (pageChanged)="onPageChange($event)" class="mx-2"></app-pagination>
+
+  <div class="d-flex justify-content-center align-items-center">
+    <button class="btn btn-primary mx-2" style="margin-top: -12px;font-size: larger;" (click)="openModal()">Add New Employee<i class="fa-solid fa-user-plus m-1"></i></button>
+    <button routerLink="/depart" class="btn btn-primary" style="margin-top: -12px;font-size: 20px;">All Departments</button>
+  </div>
+
+  <div *ngIf="employees.length === 0" class="alert alert-warning text-center mt-3">
+    No employees found.
+  </div>
+
+</div>
+<app-CreateEmployee (employeeCreated)="handleEmployeeCreated($event)"></app-CreateEmployee>

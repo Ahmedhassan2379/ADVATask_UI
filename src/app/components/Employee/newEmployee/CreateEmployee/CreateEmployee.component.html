@@ -1,0 +1,47 @@
+<div class="modal fad" tabindex="-1" id="employeeModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add New Employee</h5>
+        <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-control" formControlName="name">
+            <div *ngIf="employeeForm.get('name')?.invalid && employeeForm.get('name')?.touched" class="text-danger">
+              Name is required.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="text" id="salary" class="form-control" formControlName="salary">
+            <div *ngIf="employeeForm.get('salary')?.invalid && employeeForm.get('salary')?.touched" class="text-danger">
+              Salary is required.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="departmentId" class="form-label">Department</label>
+            <input type="text" id="departmentId" class="form-control" formControlName="departmentId">
+            <div *ngIf="employeeForm.get('departmentId')?.invalid && employeeForm.get('departmentId')?.touched" class="text-danger">
+              DepartmentId is required
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="managerId" class="form-label">ManagerId</label>
+            <input type="text" id="managerId" class="form-control" formControlName="managerId">
+            <div *ngIf="employeeForm.get('managerId')?.invalid && employeeForm.get('managerId')?.touched" class="text-danger">
+              ManagerId is required.
+            </div>
+          </div>
+
+
+          <button type="submit" (onclick)="onSubmit()" class="btn btn-primary" [disabled]="employeeForm.invalid">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
